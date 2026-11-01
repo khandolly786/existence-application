@@ -7,8 +7,7 @@ frontend, FastAPI for the API, and SQLite 3 for storage.
 
 1. Create and activate a virtual environment.
 2. Install dependencies with `pip install -r requirements.txt`.
-3. Start the server with `uvicorn main:app --reload`.
-4. Open <http://127.0.0.1:8000>.
+3. Start the server with `uvicorn main:app --reload` .4. Open <http://127.0.0.1:8000>.
 
 The SQLite database (`todos.db`) is created automatically next to `main.py`.
 The API docs are available at <http://127.0.0.1:8000/docs>.
