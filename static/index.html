@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f4ee">
+    <title>Little List — Todo</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Little List home">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>little list</span>
+        </a>
+        <span class="draft-badge"><span></span> A work in progress</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR DAY, A LITTLE LIGHTER</p>
+        <h1 id="page-title">Things to <span>get done.</span></h1>
+        <p class="subtitle">A small place for the things on your mind.</p>
+      </section>
+
+      <section class="todo-card" aria-label="Todo list">
+        <form id="todo-form" class="todo-form">
+          <label class="sr-only" for="todo-input">Add a todo</label>
+          <span class="plus-icon" aria-hidden="true">+</span>
+          <input
+            id="todo-input"
+            name="title"
+            type="text"
+            maxlength="200"
+            placeholder="Write something down..."
+            autocomplete="off"
+            required
+          >
+          <button type="submit">Add task <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <div class="list-heading">
+          <h2>Today</h2>
+          <span id="todo-count" class="todo-count">Loading...</span>
+        </div>
+
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+        <ul id="todo-list" class="todo-list"></ul>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">☼</span>
+          <p>Nothing on the list yet.</p>
+          <span>Add a little task to get started.</span>
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        <span>One thing at a time.</span>
+        <span class="footer-sparkle" aria-hidden="true">✳</span>
+      </footer>
+    </main>
+  </body>
+</html>
